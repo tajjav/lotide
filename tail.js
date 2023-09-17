@@ -1,7 +1,7 @@
 const tail = function(array) {
   let result = [];
   for (let i = 1; i < array.length; i++) {
-    let count = result.push(`${array[i]}`);
+    result.push(`${array[i]}`);
   }
   return result;
 };
