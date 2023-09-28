@@ -27,6 +27,7 @@ const assertEqual = function (actual, expected) {
  * Otherwise you get back a big fat false!
  * @param {object} obj1
  * @param {object} obj2
+ * @returns boolean
  */
 const eqObjects = function (obj1, obj2) {
   //check length using Object.keys() and compare

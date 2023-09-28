@@ -1,6 +1,6 @@
 const assertArraysEqual = function (ckArray1, ckArray2) {
-  let result = eqArrays(ckArray1,ckArray2);
-  if(result)
+  let result = eqArrays(ckArray1, ckArray2);
+  if (result)
     console.log("Both arrays are equal");
   else
     console.log("Two arrays are not equal");
@@ -22,5 +22,5 @@ const eqArrays = function (chkArray1, chkArray2) {
 
 
 //Test
-assertArraysEqual([1,2,3],[1,2,3])
-assertArraysEqual([1,2,3,4],[4,3,2,1])
+assertArraysEqual([1, 2, 3], [1, 2, 3])
+assertArraysEqual([1, 2, 3, 4], [4, 3, 2, 1])
