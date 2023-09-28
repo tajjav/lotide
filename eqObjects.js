@@ -22,7 +22,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 /**
- * eqObjects function takes in two objects.
+ * eqObjects function definition, it takes in two objects.
  * Returns true if both objects have identical keys with identical values.
  * Otherwise you get back a big fat false!
  * @param {object} obj1
