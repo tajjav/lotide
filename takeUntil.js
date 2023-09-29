@@ -30,36 +30,44 @@ const eqArrays = function (chkArray1, chkArray2) {
 }
 
 /**
- * map function definition. This is a custom map function.
+ * 
  * @param {Array} array 
- * @param {Callback Function} callbackFunction 
- * @returns {modified Array}
+ * @param {callback} callback
+ * @returns {Array} 
  */
-const map = function (array, callbackFunction) {
-  let result = [];
-  for (let element of array) {
-    result.push(callbackFunction(element));
+const takeUntil = function (array, callback) {
+  // start with an empty outputArray
+  let outputArray = [];
+  // loop over the array and check callback condition for each element
+  for (let e of array) {
+    // if true, exit the loop and return outputArray
+    // if false. push element into output array
+    if (callback(e)) {
+      return outputArray;
+    } else {
+      outputArray.push(e);
+    }
   }
-  return result;
+  return outputArray;
 }
-
 //
 // Test Code without assertArraysEqual
 //
-const words = ["ground", "control", "to", "major", "tom"];
-const results1 = map(words, words => words[0]);
-console.log(results1);
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil(data1, x => x < 0);
+console.log(results1); //--> [1,2,5,7,2]
+
+console.log("---");
+
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const result2 = takeUntil(data2, x => x === ",");
+console.log(result2); //--> ["I've", "been", "to", "Hollywood"]
 
 //
 // Test Code with assertArraysEqual
 //
 const fabionacci = [0, 1, 1, 2, 3, 5, 8, 13, 21];
-const resultfabionacci = map(fabionacci, f => f * 2);
-assertArraysEqual(resultfabionacci, [0, 2, 2, 4, 6, 10, 16, 26, 42]);
-const arrayObj = [
-  { name: 'shark', likes: 'ocean', age: '50' },
-  { name: 'turtle', likes: 'pond', age: '60' },
-  { name: 'otter', likes: 'swarms', age: '80' }
-];
-const reformatArray = map(arrayObj, e => e.name + " " + e.age);
-assertArraysEqual(reformatArray, ['shark 50', 'turtle 60', 'otter 80']);
+const resultFabionacci = takeUntil(fabionacci, f => f >= 20);
+assertArraysEqual(resultFabionacci, [0, 1, 1, 2, 3, 5, 8, 13]);
+const newResultFabionacci = takeUntil(fabionacci, g => g > 21);
+assertArraysEqual(newResultFabionacci, [0, 1, 1, 2, 3, 5, 8, 13, 21]);
