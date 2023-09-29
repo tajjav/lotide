@@ -1,7 +1,8 @@
-/*
-assertEqual Function Definition
-@Param: {actual 
-*/
+/**
+ * assertEqual function definition 
+ * @param {primitive datatypes} actual 
+ * @param {primitive datatypes} expected 
+ */
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢Assertion Passed: ${actual} === ${expected}`);
