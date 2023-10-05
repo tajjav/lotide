@@ -1,26 +1,6 @@
-//
-//@ eqArrays function
-//
-const eqArrays = function (chkArray1, chkArray2) {
-  if (chkArray1.length !== chkArray2.length)
-    return false;
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
 
-  for (let i = 0; i < chkArray1.length; i++) {
-    if (chkArray1[i] !== chkArray2[i])
-      return false;
-  }
-  return true;
-}
-//
-//@ assertEqual function
-//
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 /**
  * eqObjects function definition, it takes in two objects.
  * Returns true if both objects have identical keys with identical values.
@@ -54,6 +34,8 @@ const eqObjects = function (obj1, obj2) {
   //at the end of loop return true as it will go to end only if matched.
   return true;
 }
+
+module.exports = eqObjects;
 
 //
 // Test Code without assertEqual function with primitive objects

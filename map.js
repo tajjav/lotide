@@ -1,33 +1,4 @@
-/**
- * assertArraysEqual function definition, it compares two arrays and result is printed to console
- * @param {Array} ckArray1 
- * @param {Array} ckArray2 
- */
-const assertArraysEqual = function (ckArray1, ckArray2) {
-  let result = eqArrays(ckArray1, ckArray2);
-  if (result)
-    //console.log("Both arrays are equal");
-    console.log(`🟢🟢🟢Assertion Passed: ${ckArray1} === ${ckArray2}`);
-  else
-    //console.log("Two arrays are not equal");
-    console.log(`🔴🔴🔴Assertion Failed: ${ckArray1} !== ${ckArray2}`);
-}
-
-/**
- * eqArrays function definition, it compares two arrays and return true if matched, vice versa.
- * @param {Array} chkArray1 
- * @param {Array} chkArray2 
- * @returns {Boolean}
- */
-const eqArrays = function (chkArray1, chkArray2) {
-  if (chkArray1.length !== chkArray2.length)
-    return false;
-  for (let i = 0; i < chkArray1.length; i++) {
-    if (chkArray1[i] !== chkArray2[i])
-      return false;
-  }
-  return true;
-}
+const assertArraysEqual = require('./assertArraysEqual');
 
 /**
  * map function definition. This is a custom map function.
@@ -42,6 +13,8 @@ const map = function (array, callbackFunction) {
   }
   return result;
 }
+
+module.exports = map;
 
 //
 // Test Code without assertArraysEqual

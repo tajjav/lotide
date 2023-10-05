@@ -1,20 +1,11 @@
-//
-//@ assertEqual function
-//
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-//
-//@ findKeyByValue function
-//@ Param: obj
-//@ Param: value
-/*
-  You can find the key against a value in an object.
-*/
+const assertEqual = require('./assertEqual');
+
+/**
+ * findKeyByValue function definition, this function takes in an object and a value and returns the first key that corresponds to that value.
+ * @param {Object} obj 
+ * @param {value} value 
+ * @returns {key}
+ */
 const findKeyByValue = function (obj,value){
 // Loop over the object.
   for (let key in obj) {
@@ -27,6 +18,9 @@ const findKeyByValue = function (obj,value){
   // if no match return undefined.
   return undefined;
 }
+
+module.exports = findKeyByValue;
+
 //
 // Test Code
 //

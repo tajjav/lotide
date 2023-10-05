@@ -18,5 +18,3 @@ const eqArrays = function (chkArray1, chkArray2) {
 }
 
 module.exports = eqArrays;
-
-

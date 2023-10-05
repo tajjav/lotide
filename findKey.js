@@ -1,15 +1,4 @@
-/**
- * assertEqual function definition 
- * @param {primitive datatypes} actual 
- * @param {primitive datatypes} expected 
- */
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 /**
  * findKey function definition, it scans the object and return the first key for which the callback returns a truthy value. if no key is found, it should return undefined.
@@ -31,6 +20,8 @@ const findKey = function (object, callback) {
   //else returns undefined.
   return undefined;
 }
+
+module.exports = findKey;
 
 //
 // Test Code

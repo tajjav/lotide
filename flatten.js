@@ -1,27 +1,7 @@
-//@ assertArraysEqual function
-const assertArraysEqual = function (ckArray1, ckArray2) {
-  let result = eqArrays(ckArray1,ckArray2);
-  if(result)
-    console.log("Both arrays are equal");
-  else
-    console.log("Two arrays are not equal");
-}
+const assertArraysEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
 
-//@ eqArrays function
-const eqArrays = function (chkArray1, chkArray2) {
-
-  if(chkArray1.length !== chkArray2.length)
-    return false;
-  
-  for (let i = 0; i < chkArray1.length; i++) {
-    if(chkArray1[i] !== chkArray2[i])
-      return false;
-  }
-
-  return true;
-}
-
-//@ flatten function
+//@ flatten function definition, that takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
 const flatten = function (arrayOfNestedArrays) {
   const result = [];
   for (let i = 0; i < arrayOfNestedArrays.length; i++) {
@@ -35,6 +15,8 @@ const flatten = function (arrayOfNestedArrays) {
   }
   return result;
 }
+
+module.exports = flatten;
 
 // Test Code
 console.log(flatten([1,2,[3,4],5,[6]]));

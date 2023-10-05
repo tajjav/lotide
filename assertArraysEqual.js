@@ -14,4 +14,3 @@ const assertArraysEqual = function (ckArray1, ckArray2) {
 }
 
 module.exports = assertArraysEqual;
-

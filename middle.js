@@ -1,7 +1,5 @@
-const eqArrays = require('./eqArrays');
-
 /**
- * middle function definition, it returns the middle index/es of an array.
+ * middle function definition, it returns the middle most element of the array.
  * @param {Array} arrayToFindMidE 
  * @returns {Array}
  */
@@ -21,4 +19,3 @@ const middle = function (arrayToFindMidE) {
 }
 
 module.exports = middle;
-
