@@ -1,4 +1,11 @@
-//Head function to return first element of array
+const assertEqual = require('./assertEqual');
+
+
+/**
+ * Head function to return first element of array
+ * @param {Array} array 
+ * @returns {string} result
+ */
 const head = function(array) {
   let result = array[0];
   return result;
@@ -6,12 +13,13 @@ const head = function(array) {
 
 
 
-
+module.exports = head;
 
 
 
 
 //Test Function
+/*
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢🟢🟢Assertion Passed: ${actual} === ${expected}`);
@@ -19,12 +27,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+*/
 
 
 
-
-//Tests
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-console.log(head([1]));
-console.log(head([]));
