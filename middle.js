@@ -11,7 +11,7 @@ const middle = function (arrayToFindMidE) {
   }
   
   let middleIndex = Math.floor(arrayToFindMidE.length/2);
-  console.log(middleIndex);
+  //console.log(middleIndex);
 
   if (arrayToFindMidE.length % 2 === 0)
     return [arrayToFindMidE[middleIndex-1],arrayToFindMidE[middleIndex]];
