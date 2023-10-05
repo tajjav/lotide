@@ -1,3 +1,9 @@
+/**
+ * eqArrays function definition, returns true if two arrays are exact match.
+ * @param {Array} chkArray1 
+ * @param {Array} chkArray2 
+ * @returns {Boolean}
+ */
 const eqArrays = function (chkArray1, chkArray2) {
 
   if(chkArray1.length !== chkArray2.length)
@@ -11,19 +17,6 @@ const eqArrays = function (chkArray1, chkArray2) {
   return true;
 }
 
+module.exports = eqArrays;
 
 
-
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-
-//Test Code
-assertEqual(eqArrays([1,2,3],[1,2,3]),true);
-assertEqual(eqArrays([1,2,3],[3,2,1]),false);
