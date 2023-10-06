@@ -1,7 +1,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
 /**
- * 
+ * takeUntil function definition, this function takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
  * @param {Array} array 
  * @param {callback} callback
  * @returns {Array} 

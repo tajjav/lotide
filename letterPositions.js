@@ -1,8 +1,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
-const eqArrays = require('./eqArrays');
 
 //
-//@ letterPositions function definition
+//@ letterPositions function definition, this function takes in a string and returns all indices of letter positions in the string.
 //
 const letterPositions = function (sentence) {
   const result = {};

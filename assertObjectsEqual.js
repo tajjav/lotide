@@ -1,7 +1,7 @@
 const eqObjects = require('./eqObjects');
 
 /**
- * assertObjectsEqual function definition, this function compares two objects and print to console
+ * assertObjectsEqual function definition, this function takes in 2 objects and returns true if they are equal and false otherwise.
  * @param {object} actualObj
  * @param {object} expectedObj
  * @returns void
