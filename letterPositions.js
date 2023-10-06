@@ -26,12 +26,3 @@ module.exports = letterPositions;
 
 assertArraysEqual(letterPositions("hello").l, [2, 3]);
 assertArraysEqual(letterPositions("lighthouse in the house").h,[3,5,15,18]);
-
-
-
-//wrong attempt
-    // let indexElement = sentence.indexOf(letter);
-    // while(indexElement !== -1){
-    //   result.push(indexElement);
-    //   indexElement = sentence.indexOf(letter,indexElement+1);
-    // }

@@ -25,30 +25,3 @@ module.exports = without;
 console.log(without(["1","2","3"],[1,2,"3"]));
 assertArraysEqual(without([1,2,3], [1]),[2,3]);
 assertArraysEqual(without([1,2,3], [1,2,3]),[]); // test to make sure original array is not modified
-
-
-
-
-
-// wrong attempt
-// const without = function (sourceArray, itemsToRemoveArray) {
-//   let result = [];
-//   for ( let i = 0; i < sourceArray.length; i++) {
-//     for ( let j = 0; j < itemsToRemoveArray.length; j++) {
-//       if(sourceArray[i] === itemsToRemoveArray[j]) {
-//         result = sourceArray.splice(i,1);
-//         console.log(result);
-//       }
-//     }
-//   }
-//   return result;
-// }
-
-
-
-
-
-
-
-
-
